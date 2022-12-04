@@ -1,21 +1,63 @@
-@media (prefers-color-scheme: dark) {
-  .toggleLightMode:root {
-    --background: var(--black);
-    --text: var(--white);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .toggleDarkMode:root {
-    --background: var(--white);
-    --text: var(--black);
-  }
-}
 .home-container {
   background-image: url("https://www.novation.be/themes/custom/novsubtheme/img.min/globe.jpg");
   width: 100%;
   padding: container;
   height: 100vh;
+  /* display: flex;
+  justify-content: center; */
+}
+.future {
+  color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+}
+.first-home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+@media screen and (width > 600px) {
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
+@media screen and (width < 600px) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+}
+
+.stream {
+  color: #706c6c;
+  animation-name: rotate-in-center;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+
+  /* shorthand
+  animation: rotate-in-center 1s ease 0s infinite normal forwards;*/
+}
+@keyframes rotate-in-center {
+  0% {
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
