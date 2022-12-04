@@ -1,0 +1,21 @@
+@media (prefers-color-scheme: dark) {
+  .toggleLightMode:root {
+    --background: var(--black);
+    --text: var(--white);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .toggleDarkMode:root {
+    --background: var(--white);
+    --text: var(--black);
+  }
+}
+.home-container {
+  background-image: url("https://www.novation.be/themes/custom/novsubtheme/img.min/globe.jpg");
+  width: 100%;
+  padding: container;
+  height: 100vh;
+}
+
+
